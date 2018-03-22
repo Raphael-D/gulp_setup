@@ -103,7 +103,9 @@ gulp.task('babel', function() {
 			return gulp.src(config.babel.src)
 				.pipe(plumber())
 				.pipe(changed(config.babel.dest))
-				.pipe(babel())
+				.pipe(babel({
+					presets: ['es2015']
+				}))
 				.on('error', errorLog)
 				.pipe(rename(function(path) {
 					var cutLength = path.basename.length - 4;
@@ -219,6 +221,5 @@ gulp.task('watch', () => {
 "    \\/_/\\/_/ \\/____/   \\/____/   \\/____/ \\/___/                '\\/__//__/  \\/___/   \\/_/    \\/____/ \\/__,_ / \n")
 });
 console.log("＼( 'ω')／ウオオオオオオアアアアアアアアアアーーーーーッッッッ！！！！");
-gulp.task('default',
-	gulp.series('watch')
-);
+const defaultTask = gulp.series('watch');
+gulp.task('default', defaultTask);
