@@ -44,6 +44,8 @@ configsディレクトリ直下のJavaScriptには各プロジェクトへのパ
 
 ④　③のjsファイルを開いて開発するプロジェクトへの相対パスへ編集。
 
+⑤gulp_run_mac.commandを実行し、gulpを起動。
+
 
 = 実装方法 windowsの場合 ==========================
 
@@ -56,3 +58,5 @@ configsディレクトリ直下のJavaScriptには各プロジェクトへのパ
 ④configsディレクトリ直下のmysite_hoge.jsを開発中プロジェクトと関連する名前にリネーム。
 
 ⑤　④のjsファイルを開いて開発するプロジェクトへの相対パスへ編集。
+
+⑥gulp_run_win.batを実行し、gulpを起動。
