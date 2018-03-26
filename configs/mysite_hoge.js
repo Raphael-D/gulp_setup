@@ -12,7 +12,7 @@
 module.exports = {
 	sass: { // SCSS
 		src: ['./mysite_hoge/scss/*.scss'], // sassのディレクトリ
-		dest: './mysite_hoge/css/', // scss => cssコンパイル後のディレクトリ
+		dest: './mysite_hoge/css/dest/', // scss => cssコンパイル後のディレクトリ
 		img: './mysite_hoge/images/' // imagesディレクトリ
 	},
 	babel: { // Babel
