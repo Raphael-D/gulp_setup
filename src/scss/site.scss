@@ -1,13 +1,19 @@
 @charset "utf-8";
-@import "system/scss/variable";
-@import "system/scss/mixins";
-// theme
+
+// acms.css兼用
+@import "system/variable";
+@import "system/mixins";
+
+// siteテーマ専用
 @import "theme/**";
-// base
+// ベース
 @import "base/**";
-// parts
+// パーツ
 @import "parts/**";
-// contents
+// コンテンツ
 @import "contents/**";
-// layout
+// レイアウト
 @import "layout/**";
+// オリジナル
+@import "common";
+@import "style";
