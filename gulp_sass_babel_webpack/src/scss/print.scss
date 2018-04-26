@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+// acms.css兼用
+@import "system/variable";
+@import "system/mixins";
+@import "../../system/scss/acms-fonts";
+
+// siteテーマ専用
+@import "theme/**";
+
+@import "print/**"; // font-sizeの単位をremを有効にしています
+
+/* ------------------------------
+　　フォントサイズ対応
+------------------------------ */
+// フォントサイズを小さくするために各パーツを再度読み直しています。
+
+// ベース
+@import "base/**";
+
+// remを有効にしたため、全体のフォントサイズを指定しています
+html {
+	font-size: 40%;
+}
+
+// パーツ
+@import "parts/button";
+@import "parts/pageTitle";
+@import "parts/pager";
+@import "parts/topicpath";
+@import "parts/slider";
+@import "parts/module";
+@import "parts/list";
+@import "parts/summary";
+@import "parts/pickup";
+@import "parts/banner";
+@import "parts/headline";
+@import "parts/search";
+
+// コンテンツ
+@import "contents/**";
+
+// レイアウト
+@import "layout/**";
+
+/* ------------------------------
+　　acms.css ノンレスポンシブ対応
+------------------------------ */
+
+// グリッドシステムのカラム数
+$col: 12;
+// ブレイクポイントごとのクラス名
+$breakpoints: ("","-sm","-md","-lg","-xl");
+
+[class*="acms-col-"] {
+	float: left;
+}
+
+@each $mq-name in $breakpoints {
+
+	 @for $i from 1 through $col {
+		$width: (100% / ($col/$i));
+		.acms-col#{$mq-name}-#{$i} {
+			width: $width;
+		}
+	}
+}
+
+// 63行目でfloat:left; させた [class*="acms-col-"]の影響を修正するため再度読み込み
+@import "system/unit.scss";
+
+// $breakpointsの回数分ループする
+@each $mq-name in $breakpoints {
+	// $display-text-patternsの回数分ループする
+	$display-text-patterns:(block, inline, inline-block, table-cell, hide );
+	$display-patterns: (block, inline, inline-block, table-cell, none);
+
+	@each $class in $display-text-patterns {
+		$index: index($display-text-patterns, $class);
+		$display: nth($display-patterns, $index);
+
+		.acms-#{$class}#{$mq-name} {
+			display: $display!important;
+		}
+	}
+}
+
+// デバイスのクラス名
+$device-patterns:("-sp","-tb","-pc");
+
+// $device-patternsの回数分ループする
+@each $device-name in $device-patterns {
+	// $display-text-patternsの回数分ループする
+	$display-text-patterns:(show, hide );
+	$display-patterns: (block, none);
+
+	@each $class in $display-text-patterns {
+		$index: index($display-text-patterns, $class);
+		$display: nth($display-patterns, $index);
+
+		.acms-#{$class}#{$device-name} {
+			display: $display!important;
+		}
+	}
+}
+
+/* ------------------------------
+　　テーマ用CSS プリント対応
+------------------------------ */
+
+// ヘッダー
+.header-logo {
+	padding: 0;
+}
+
+.sub {
+	display: none;
+}
+.main {
+	width: 100%;
+	display: block;
+}
+
+// エントリー
+.entry-column td, .entry-column th {
+	display: table-cell;
+}
+
+.entry-footer {
+	display: none;
+}
+
+.serial-nav {
+	display: none;
+}
+
+// フッター
+.suggest-half {
+	float: left;
+	width: 50%;
+}
+.sns-list {
+	float: right;
+}
