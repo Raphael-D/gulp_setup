@@ -3,7 +3,7 @@ wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_bab
 wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/package.json --no-check-certificate
 wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/gulpfile.js --no-check-certificate
 wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/gulp_run_win.bat --no-check-certificate
-git svn clone https://github.com/Raphael-D/gulp_setup/gulp_sass_babel/trunk/src
+git svn clone https://github.com/Raphael-D/gulp_setup/trunk/gulp_sass_babel/src
 cd src
 rd /S /Q .git
 cd ../
