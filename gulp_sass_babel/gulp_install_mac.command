@@ -8,7 +8,7 @@ curl -O https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_
 svn export https://github.com/Raphael-D/gulp_setup/branches/master/gulp_sass_babel/src
 mkdir configs
 cd configs
-curl -O https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/configs/mysite_hoge.js
+curl -O https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/configs/src.js
 cd ../
 npm i -D
 npx gulp

@@ -9,7 +9,7 @@ rd /S /Q .git
 cd ../
 mkdir configs
 cd configs
-wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/configs/mysite_hoge.js --no-check-certificate
+wget https://raw.githubusercontent.com/Raphael-D/gulp_setup/master/gulp_sass_babel/configs/src.js --no-check-certificate
 cd ../
 npm i -D
 npx gulp
