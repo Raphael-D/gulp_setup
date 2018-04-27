@@ -1,7 +1,10 @@
-gulpセットアップツールです。
+# プロジェクトが増える度に煩わしいインストールや設定不要！複数のプロジェクトやサイト開発に対応するGulpのセットアップツールです。
+## Every time the number of projects increases, annoying installation or setup is unnecessary! Gulp setup tool that supports multiple projects and site development.
 
+プロジェクトが増えても、プロジェクトへのパスを設定するだけでGulpが使える、簡単設定仕様です。
 gulpのインストールから業務でよく使うパッケージのインストールまで一括で行います。
 インストールにはwindows, macそれぞれのバッチファイルをご使用ください。
+※注意！windowsは別途wgetをインストールしてください。
 
 configsディレクトリ直下のJavaScriptには各プロジェクトへのパスを記述していますので任意に変更してください。
 また、gulpを使用するプロジェクトを増やす場合は、configsディレクトリ直下にあるjsファイルを複製し、リネームして相対パスを編集してお使いください。
