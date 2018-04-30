@@ -28,7 +28,7 @@ const ESmoduleFileName = {
 ******************** */
 const dirNames = {
 	sass: 'scss',
-	css: 'css',
+	css: 'css/dest',
 	images: 'images',
 	js: 'js',
 	jsmin: 'min',
