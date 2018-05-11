@@ -52,7 +52,7 @@ const value = {
 		dest: rootPath + dirNames.js + '/' + dirNames.jsmin + '/'
 	},
 	babel: {
-		src: [rootPath + dirNames.es6 + '/' + '*.es6.js'],
+		src: [rootPath + dirNames.js + '/' + dirNames.es6 + '/' + '*.es6.js'],
 		dest: rootPath + dirNames.js + '/'
 	},
 	webpack: {
